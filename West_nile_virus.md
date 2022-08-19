@@ -32,7 +32,8 @@ sudo apt install mafft iqtree raxml fasttree vcftools
 ```
 
 #perform the MSA with Augur
-```augur align [-h] --sequences FASTA [FASTA ...] [--output OUTPUT]
+```bash
+augur align [-h] --sequences FASTA [FASTA ...] [--output OUTPUT]
                    [--nthreads NTHREADS] [--method {mafft}]
                    [--reference-name NAME] [--reference-sequence PATH]
                    [--remove-reference] [--fill-gaps]
@@ -40,3 +41,13 @@ sudo apt install mafft iqtree raxml fasttree vcftools
 ```
 
 
+# generate tree
+```bash
+usage: augur tree [-h] --alignment ALIGNMENT
+                  [--method {fasttree,raxml,iqtree}] [--output OUTPUT]
+                  [--substitution-model SUBSTITUTION_MODEL]
+                  [--nthreads NTHREADS] [--vcf-reference VCF_REFERENCE]
+                  [--exclude-sites EXCLUDE_SITES]
+                  [--tree-builder-args TREE_BUILDER_ARGS]
+                  [--override-default-args]
+```
