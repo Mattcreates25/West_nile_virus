@@ -40,6 +40,10 @@ augur align [-h] --sequences FASTA [FASTA ...] [--output OUTPUT]
                    [--existing-alignment FASTA] [--debug]
 ```
 
+```bash
+augur align -s OU953895.1.fasta  OU953896.1.fasta OU953897.1.fasta OU953898.1.fasta  --method mafft --fill-gaps --reference-sequence NC_009942.1.fasta 
+
+```
 
 # generate tree
 ```bash
@@ -50,4 +54,9 @@ usage: augur tree [-h] --alignment ALIGNMENT
                   [--exclude-sites EXCLUDE_SITES]
                   [--tree-builder-args TREE_BUILDER_ARGS]
                   [--override-default-args]
+```
+
+```bash
+augur tree -a alignment.fasta --method iqtree --substitution-model GTR -o alignment.nwk --tree-builder-args="-ninit 2 -n 2 -me 0.05"
+
 ```
