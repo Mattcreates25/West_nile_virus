@@ -1,0 +1,5 @@
+Building DAG of jobs...
+File path 'data/four_sequences.fasta ' ends with whitespace. This is likely unintended. It can also lead to inconsistent results of the file-matching approach used by Snakemake.
+MissingInputException in line 1 of /home/icipe/WNV/Snakefile:
+Missing input files for rule parse:
+data/four_sequences.fasta 

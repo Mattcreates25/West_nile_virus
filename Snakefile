@@ -1,18 +1,16 @@
-rule refine:
+rule parse:
     input:
-        tree = rules.tree.output.tree,
-        alignment = rules.align.output,
-        metadata = "data/metadata.csv"
+        sequences = "data/all_sequences.fasta"
     output:
-        tree = "results/tree.nwk",
-        node_data = "results/branch_lengths.json"
+        sequences = "results/all_sequencesP.fasta",
+        metadata = "results/all_metadata.tsv"
+    params:
+        fields = "strain"
     shell:
         """
-        augur refine \
-            --tree {input.tree} \
-            --alignment {input.alignment} \
-            --metadata {input.metadata} \
-            --timetree \
-            --output-tree {output.tree} \
-            --output-node-data {output.node_data}
+        augur parse \
+            --sequences {input.sequences} \
+            --fields {params.fields} \
+            --output-sequences {output.sequences} \
+            --output-metadata {output.metadata}
         """

@@ -1,0 +1,17 @@
+rule parse:
+    input:
+        sequences = "all_sequences.fasta"
+    output:
+        sequences = "parsed/all_sequences.fasta",
+        metadata = "parsed/metadata1.tsv"
+    params:
+        fields = "accession strain datatype"
+    shell:
+        """
+        augur parse \
+            --sequences {input.sequences} \
+            --fields {params.fields} \
+            --output-sequences {output.sequences} \
+            --output-metadata {output.metadata} \
+            --fix-dates monthfirst
+    

@@ -1,0 +1,30 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	parse
+	1
+
+[Wed Aug 24 13:19:30 2022]
+rule parse:
+    input: data/all_seq.fasta
+    output: results/all_seqP.fasta, results/metadata.tsv
+    jobid: 0
+
+[Wed Aug 24 13:19:31 2022]
+Error in rule parse:
+    jobid: 0
+    output: results/all_seqP.fasta, results/metadata.tsv
+    shell:
+        
+        augur parse             --sequences data/all_seq.fasta             --fields strain name description             --output-sequences results/all_seqP.fasta             --output-metadata results/metadata.tsv
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job parse since they might be corrupted:
+results/all_seqP.fasta
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /home/icipe/WNV/.snakemake/log/2022-08-24T131930.453450.snakemake.log

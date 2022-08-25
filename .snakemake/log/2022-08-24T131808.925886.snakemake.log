@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 1 of /home/icipe/WNV/Snakefile:
+Missing input files for rule parse:
+all_seq.fasta

@@ -20,110 +20,107 @@ conda install -c conda-forge nodejs
 npm install --global auspice
 ```
 
-## download the sequences with wget
+## install snakemake
+```bash
+conda install snakemake
 ```
+
+## download the sequences with wget
+```bash
 wget https://www.ebi.ac.uk/ena/browser/api/fasta/OU953897.1?download=true
 wget https://www.ebi.ac.uk/ena/browser/api/fasta/OU953898.1?download=true
 wget https://www.ebi.ac.uk/ena/browser/api/fasta/OU953895.1?download=true
 wget https://www.ebi.ac.uk/ena/browser/api/fasta/OU953896.1?download=true
 ```
 
-##combine the fasta files into one fasta file
-cat OU* >> WNV_combi.fasta
+##combine all the sequences 
+```bash
+cat WWR_sequences.fasta WWR_sequences.fasta >>all_sequences.fasta
+```
 
-### download the reference sequence from NCBI
+###  the reference sequence was downloaded from NCBI and saved into a file called refseq.fasta
 [link][1]
 
 [1][https://www.ncbi.nlm.nih.gov/nuccore/NC_009942.1]
 
-## the fasta sequences for the world-wide representative set of WNVs sequences were obtained using batch entrez and improted into a single file
+## the fasta sequences for the world-wide representative set of WNVs sequences were obtained using batch entrez and improted into a single file called 
+## WWR_sequences.fasta
+## accession numbers were retrieved from the viruses-13-00836-s001.zip which can be found in the Table S1.R3.xlsx.for retrieving purposed they were saved into a 
+## text file called WWrep_accession.txt
+```bash
+wget https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8148183/bin/viruses-13-00836-s001.zip
+unzip viruses-13-00836-s--1.zip
+```
+## create a txt file and paste all the accession numbers there. this file will be input into batch entrez
+```bash
+touch WWrep_accession.txt
+```
 
-##combined all the sequences ie the 4 reference sequences and the world-wide reperesentative set of WNVs
-cat WNV_combi.fasta table_sequences.fasta >>all_sequences.fasta
+
+## create a directory for all sequence data
+```bash
+mkdir data
+```
+
+#phylogenetic analysis
+
+##Parse delimited fields from FASTA sequence names into a TSV and FASTA file using a Snakefile  input this code this creates a metadata file alongside the fasta file
+## and saved into a folder called results which will be used in subsequent steps
+```bash
+rule parse:
+    input:
+        sequences = "data/all_sequences.fasta"
+    output:
+        sequences = "results/all_sequencesP.fasta",
+        metadata = "results/all_metadata.tsv"
+    params:
+        fields = "site accession strain desciption"
+    shell:
+        """
+        augur parse \
+            --sequences {input.sequences} \
+            --fields {params.fields} \
+            --output-sequences {output.sequences} \
+            --output-metadata {output.metadata}
+```
+
+
+
+## perform nucleotide base count  using augur index
+```bash
+augur index -s data/all_sequences.fasta -o results/sequence_index.tsv
+```
+
+## We then provide the sequence index as an input to augur filter commands to speed up filtering on sequence-specific attributes.
+
+```bash
+augur filter 
+```
 
 ## for alignment mafft is required 
 ```bash
 sudo apt install mafft iqtree raxml fasttree vcftools
 ```
-## install figtree to visualize tree data
-```
-sudo apt-get -y install figtree
-```
-
-## filter and subsample the sequences
-
-usage: augur filter [-h] --metadata FILE [--sequences SEQUENCES]
-                    [--sequence-index SEQUENCE_INDEX]
-                    [--metadata-chunk-size METADATA_CHUNK_SIZE]
-                    [--metadata-id-columns METADATA_ID_COLUMNS [METADATA_ID_COLUMNS ...]]
-                    [--query QUERY] [--min-date MIN_DATE]
-                    [--max-date MAX_DATE]
-                    [--exclude-ambiguous-dates-by {any,day,month,year}]
-                    [--exclude EXCLUDE [EXCLUDE ...]]
-                    [--exclude-where EXCLUDE_WHERE [EXCLUDE_WHERE ...]]
-                    [--exclude-all] [--include INCLUDE [INCLUDE ...]]
-                    [--include-where INCLUDE_WHERE [INCLUDE_WHERE ...]]
-                    [--min-length MIN_LENGTH] [--non-nucleotide]
-                    [--group-by GROUP_BY [GROUP_BY ...]]
-                    [--sequences-per-group SEQUENCES_PER_GROUP | --subsample-max-sequences SUBSAMPLE_MAX_SEQUENCES]
-                    [--probabilistic-sampling | --no-probabilistic-sampling]
-                    [--priority PRIORITY] [--subsample-seed SUBSAMPLE_SEED]
-                    [--output OUTPUT] [--output-metadata OUTPUT_METADATA]
-                    [--output-strains OUTPUT_STRAINS]
-                    [--output-log OUTPUT_LOG]
 
 #perform the MSA with Augur
 ```bash
-augur align [-h] --sequences FASTA [FASTA ...] [--output OUTPUT]
-                   [--nthreads NTHREADS] [--method {mafft}]
-                   [--reference-name NAME] [--reference-sequence PATH]
-                   [--remove-reference] [--fill-gaps]
-                   [--existing-alignment FASTA] [--debug]
-```
-
-```bash
-augur align -s all_sequences.fasta --method mafft --fill-gaps --reference-sequence NC_009942.1.fasta -o new_alignment.fasta
-
+align -s data/all_sequences.fasta -o results/all_alignment.fasta --method mafft --reference-sequence data/refseq.fasta --fill-gaps
 
 ```
 
 # generate tree
 ```bash
-usage: augur tree [-h] --alignment ALIGNMENT
-                  [--method {fasttree,raxml,iqtree}] [--output OUTPUT]
-                  [--substitution-model SUBSTITUTION_MODEL]
-                  [--nthreads NTHREADS] [--vcf-reference VCF_REFERENCE]
-                  [--exclude-sites EXCLUDE_SITES]
-                  [--tree-builder-args TREE_BUILDER_ARGS]
-                  [--override-default-args]
-```
-
-```bash
-augur tree -a new_alignment.fasta --method iqtree --substitution-model GTR -o alignment.nwk --tree-builder-args="-ninit 2 -n 2 -me 0.05"
+augur tree -a results/all_alignment.fasta -o results/alignment.nwk --method iqtree --substitution-model GTR -o alignment.nwk --tree-builder-args="-ninit 2 -n 2 -me 0.05"
 
 ```
 
 
 # refine
-```bash
-usage: augur refine [-h] [--alignment ALIGNMENT] --tree TREE [--metadata FILE]
-                    [--output-tree OUTPUT_TREE]
-                    [--output-node-data OUTPUT_NODE_DATA] [--use-fft]
-                    [--timetree] [--coalescent COALESCENT]
-                    [--gen-per-year GEN_PER_YEAR] [--clock-rate CLOCK_RATE]
-                    [--clock-std-dev CLOCK_STD_DEV] [--root ROOT [ROOT ...]]
-                    [--keep-root] [--covariance] [--no-covariance]
-                    [--keep-polytomies] [--precision {0,1,2,3}]
-                    [--date-format DATE_FORMAT] [--date-confidence]
-                    [--date-inference {joint,marginal}]
-                    [--branch-length-inference {auto,joint,marginal,input}]
-                    [--clock-filter-iqd CLOCK_FILTER_IQD]
-                    [--vcf-reference VCF_REFERENCE]
-                    [--year-bounds YEAR_BOUNDS [YEAR_BOUNDS ...]]
-                    [--divergence-units {mutations,mutations-per-site}]
-                    [--seed SEED]
-```
 
 ```bash
+augur refine -a results/all_alignment.fasta -t alignment.nwk --metadata results/all_metadata.tsv --timetree --output-tree results/refined_alignment.nwk --output-node-data results/branches.json
 
 ```
+
+#export 
+

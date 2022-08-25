@@ -1,0 +1,19 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	parse
+	1
+
+[Wed Aug 24 12:27:11 2022]
+rule parse:
+    input: data/four_sequences.fasta
+    output: results/four_seq.fasta, results/metadata.tsv
+    jobid: 0
+
+[Wed Aug 24 12:27:12 2022]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: /home/icipe/WNV/.snakemake/log/2022-08-24T122711.483257.snakemake.log

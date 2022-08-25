@@ -1,0 +1,3 @@
+CreateRuleException in line 17 of /home/icipe/WNV/Snakefile:
+The name parse is already used by another rule
+  File "/home/icipe/WNV/Snakefile", line 17, in <module>
