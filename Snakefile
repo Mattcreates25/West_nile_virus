@@ -3,7 +3,7 @@ rule parse:
         sequences = "data/all_sequences.fasta"
     output:
         sequences = "results/all_sequencesP.fasta",
-        metadata = "results/all_metadata.tsv"
+        metadata = "results/all_metadata.csv"
     params:
         fields = "strain"
     shell:
