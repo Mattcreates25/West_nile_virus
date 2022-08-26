@@ -98,6 +98,17 @@ rule parse:
             --output-metadata {output.metadata}
 ```
 
+create a ```python``` script to split the accessions from the description in the metadata and mark the script as an executable file
+
+```bash
+touch parse.py
+chmod +x sample-script.py
+```
+
+convert the csv to tsv for augur filter
+```bash
+cat results/newmeta.csv | sed 's/,/\t/g' > results/newmeta.tsv
+```
 
 perform nucleotide base count  using ```augur index```
 ```bash
