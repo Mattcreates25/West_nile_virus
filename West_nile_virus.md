@@ -107,8 +107,25 @@ augur index -s data/all_sequences.fasta -o results/sequence_index.tsv
 We then provide the sequence index as an input to augur filter commands to speed up filtering on sequence-specific attributes.
 __encountered a problem here cause of conflict in metadata__
 
+## error message
 ```bash
 augur filter --sequences data/all_sequences.fasta --metadata results/all_metadata.csv --sequence-index results/sequence_index.tsv  --output filtered.fasta 
+```
+```bash
+Traceback (most recent call last):
+  File "/home/icipe/miniconda3/envs/forAugur/lib/python3.10/site-packages/augur/__init__.py", line 65, in run
+    return args.__command__.run(args)
+  File "/home/icipe/miniconda3/envs/forAugur/lib/python3.10/site-packages/augur/filter.py", line 1400, in run
+    metadata_reader = read_metadata(
+  File "/home/icipe/miniconda3/envs/forAugur/lib/python3.10/site-packages/augur/io/metadata.py", line 76, in read_metadata
+    raise Exception(f"None of the possible id columns ({id_columns!r}) were found in the metadata's columns {tuple(chunk.columns)!r}")
+Exception: None of the possible id columns (['strain', 'name']) were found in the metadata's columns ('s', 'rain')
+
+
+An error occurred (see above) that has not been properly handled by Augur.
+To report this, please open a new issue including the original command and the error above:
+    <https://github.com/nextstrain/augur/issues/new/choose>
+
 ```
 
 for alignment ```mafft``` is required. MAFFT (Multiple Alignment using Fast Fourier Transform) is a high speed multiple sequence alignment program.
@@ -137,4 +154,7 @@ augur refine -a results/all_alignment.fasta -t alignment.nwk --metadata results/
 ```
 
 #export 
+to export the tree due to metadata constraints as of now I used iTOL tree
 
+
+![tree]()
