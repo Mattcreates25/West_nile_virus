@@ -108,7 +108,7 @@ We then provide the sequence index as an input to augur filter commands to speed
 __encountered a problem here cause of conflict in metadata__
 
 ```bash
-augur filter --sequences data/all_sequences.fasta --metadata results/metadata.tsv --sequence-index results/sequence_index.tsv  --output filtered.fasta 
+augur filter --sequences data/all_sequences.fasta --metadata results/all_metadata.csv --sequence-index results/sequence_index.tsv  --output filtered.fasta 
 ```
 
 for alignment ```mafft``` is required. MAFFT (Multiple Alignment using Fast Fourier Transform) is a high speed multiple sequence alignment program.
