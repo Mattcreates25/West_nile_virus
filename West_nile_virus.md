@@ -153,8 +153,7 @@ augur refine -a results/all_alignment.fasta -t alignment.nwk --metadata results/
 
 ```
 
-#export 
+# export 
 to export the tree due to metadata constraints as of now I used iTOL tree
 
-
-![tree]()
+![1 image](https://user-images.githubusercontent.com/97890823/186853004-83f14f42-99ef-47fd-abf5-9c56a327dcc4.png)
