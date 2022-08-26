@@ -1,5 +1,8 @@
 # __Phylogenetic Analysis of the 2020 West Nile Virus (WNV) Outbreak in Andalusia (Spain)__
 
+## introduction
+The Andalusian viral samples belonged to lineage 1 and were relatively similar to those of previous outbreaks which occurred in the Mediterranean region
+
 ## workspace preparations 
 The first thing we did was create a working directory where we will save our files. we initiated a git repo this way we could share our work on GitHub
  
@@ -77,9 +80,12 @@ mv *.fasta data
 
 ## phylogenetic analysis
 
+The entire analysis can be run using snakemake workflow management. ```Snakemake``` breaks a workflow into a set of rules that are specified in a file called Snakefile. Each rule takes a number of input files, specifies a few parameters, and produces output files
+
 Parse delimited fields from FASTA sequence names into a TSV and FASTA file using a ```Snakefile```  input in this code creates a metadata file
 alongside the fasta file and saved into a folder called results which will be used in subsequent steps
 to do this we created a Snakemake file and used the augur parse command
+
 ```bash
 rule parse:
     input:
