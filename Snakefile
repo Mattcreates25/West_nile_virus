@@ -15,23 +15,51 @@ rule parse:
             --output-metadata {output.metadata}
         """
 
+rule index:
+    input:
+        sequences = rules.parse.output.sequences
+    output:
+        indexed = "results/sequence_index.tsv"
+    shell:
+        """
+        augur index \
+            --sequences {input.sequences} \
+            --output-sequences {output.indexed}
+        """
+
+
 rule align:
     input:
-        seq="data/all_sequences.fasta"
+        sequences = rules.parse.output.sequences
+	reference = data/req_seq.fasta
     params:
-        nthreads = 2
+        method = mafft
     output:
-        aln="results/alignment.fasta"
+        alignment="results/all_alignment.fasta"
     shell:
-        '''
-        augur align --sequences {input.seq} --nthreads {params.nthreads} --ouput {output.aln}
-        '''
+        """
+        augur align \
+            --sequences {input.sequences} \
+	    --reference-sequence {input.reference}
+            --method {params.method} \
+            --output {output.alignment} \
+	    --fill-gaps
+        """
+
 rule tree:
     input:
-        aln="results/all_alignment.fasta"
+        alignment = rules.align.output.alignment
     output:
-        tree="results/tree.nwk"
+        tree = "results/tree.nwk"
+    params:
+	methods = iqtree
+	substmodel = GTR
     shell:
-        '''
-        augur tree --alignment {input.aln} --ouput {output.tree}
-        '''
+        """
+        augur tree \
+            --alignment {input.alignment} \
+            --output {output.tree} \
+            --method {params.methods} \
+	    --substitution-model {params.substmodel} \
+	    --tree-builder-args="-ninit 2 -n 2 -me 0.05"
+        """

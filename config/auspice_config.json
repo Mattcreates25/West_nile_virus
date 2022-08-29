@@ -1,0 +1,26 @@
+{
+  "title": "West nile virus",
+  "colorings": [
+    {"key": "gt", "title": "Genotype", "type": "categorical"},
+    {"key": "country", "title": "Country", "type": "categorical"},
+    {"key": "state", "title": "State", "type": "categorical"},
+    {"key": "lineage", "title": "Strain", "type": "categorical"},
+    {"key": "host", "title": "Host Species", "type": "categorical"}
+  ],
+  "geo_resolutions": [
+    "Country",
+    "state"
+  ],
+  "maintainers": [
+    {"name": "Mattcreates25", "url": "https://github.com/Mattcreates25"}
+  ],
+  "filters": [
+    "country",
+    "state"
+  ],
+  "display_defaults": {
+    "color_by": "country",
+    "map_triplicate": false,
+    "geo_resolution": "country"
+ }
+}

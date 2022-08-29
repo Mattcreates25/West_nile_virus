@@ -106,14 +106,31 @@ rule parse:
 
 create a ```python``` script to split the accessions from the description in the metadata and mark the script as an executable file
 
+```py
+# import the panda library
+import pandas as pd
+
+#read in the metadata csv
+df = pd.read_csv('results/all_metadata.csv')
+
+#check the format
+df.head(15)
+
+#create a variable with split data
+new_metadata = df['strain'].str.split('.', n=1, expand=True)
+
+#rename the columns
+new_meta = new_metadata.rename(columns={0:'strain',1:'name'})
+
+#export as a csv
+new_meta.to_csv('newmeta.csv',index=False)
+
+```
+
+
 ```bash
 touch parse.py
 chmod +x sample-script.py
-```
-
-convert the csv to tsv for augur filter
-```bash
-cat results/newmeta.csv | sed 's/,/\t/g' > results/newmeta.tsv
 ```
 
 perform nucleotide base count  using ```augur index```
@@ -121,7 +138,7 @@ perform nucleotide base count  using ```augur index```
 augur index -s data/all_sequences.fasta -o results/sequence_index.tsv
 ```
 
-We then provide the sequence index as an input to augur filter commands to speed up filtering on sequence-specific attributes.
+We then provide the sequence index as an input to augur filter commands to help in the filtering of sequence-specific attributes.
 __encountered a problem here cause of a conflict in metadata__
 
 ## error message
@@ -152,13 +169,13 @@ sudo apt install mafft iqtree raxml fasttree vcftools
 
 perform the MSA with Augur
 ```bash
-align -s data/all_sequences.fasta -o results/all_alignment.fasta --method mafft --reference-sequence data/refseq.fasta --fill-gaps
+augur align -s data/all_sequences.fasta -o results/all_alignment.fasta --method mafft --reference-sequence data/refseq.fasta --fill-gaps
 
 ```
 
 generate tree
 ```bash
-augur tree -a results/all_alignment.fasta -o results/alignment.nwk --method iqtree --substitution-model GTR -o alignment.nwk --tree-builder-args="-ninit 2 -n 2 -me 0.05"
+augur tree -a results/all_alignment.fasta -o results/tree.nwk --method iqtree --substitution-model GTR -o results/tree.nwk --tree-builder-args="-ninit 2 -n 2 -me 0.05"
 
 ```
 
@@ -166,11 +183,39 @@ augur tree -a results/all_alignment.fasta -o results/alignment.nwk --method iqtr
 # refine
 
 ```bash
-augur refine -a results/all_alignment.fasta -t alignment.nwk --metadata results/all_metadata.tsv --timetree --output-tree results/refined_alignment.nwk --output-node-data results/branches.json
+augur refine --tree results/tree.nwk -a results/all_alignment.fasta --metadata results/newmeta.csv --output-tree results/new_tree.nwk --output-node-data results/branches.json --keep-root
+
 
 ```
 
-# export 
+# export
+```bash
+augur export v2 -t results/new_tree.nwk --node-data results/branches.json --output results/tree_auspice.json
+``` 
 to export the tree due to metadata constraints as of now I used iTOL tree
 
 ![1 image](https://user-images.githubusercontent.com/97890823/186853004-83f14f42-99ef-47fd-abf5-9c56a327dcc4.png)
+
+
+# view the tree 
+using auspice to do this a narrative file is necessary which can be found in ```narratives``` 
+
+```
+---
+title: west_Nile_narrative
+authors: "Mark Njama"
+authorLinks: "https://github.com/Mattcreates25"
+affiliations: "icipe"
+date: "August 2022"
+dataset: "http://localhost:4000/results/branches/na?d=tree"
+abstract: "This narrative will take us to auspice for vizualization."
+---
+
+```
+
+after this you can view your tree by running this line in bash this creates a localhost why your tree
+
+```bash
+auspice view --datasetDir results/ --narrativeDir narrative/
+ 
+```
