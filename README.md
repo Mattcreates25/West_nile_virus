@@ -201,6 +201,8 @@ augur tree -a results/all_alignment.fasta -o results/tree.nwk --method iqtree --
 
 
 ## refine
+Branching date estimation was carried out with the least square dating (LSD2) method which is the default in augur align.
+
 ```bash
 augur refine --tree results/tree.nwk -a results/all_alignment.fasta --metadata results/newmeta.csv --output-tree results/new_tree.nwk --output-node-data results/branches.json --keep-root
 ```
