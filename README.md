@@ -20,6 +20,12 @@ mkdir WNV
 cd WNV
 git init
 ```
+alternatively you can copy this github repo using ```git clone``` in your terminal
+
+```bash
+git clone git@github.com:Mattcreates25/West_nile_virus.git
+```
+
 ### Create a conda environment
 Augur is a bioinformatics tool for phylogenetic analysis. the collection of commands from the tool are designed to be used with a larger processing pipeline like
 ```snakemake``` Augur is composed of a series of modules and different workflows will use different parts of the pipeline.
