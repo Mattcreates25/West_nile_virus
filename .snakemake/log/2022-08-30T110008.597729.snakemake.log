@@ -1,0 +1,3 @@
+NameError in line 36 of /home/icipe/WNV/Snakefile:
+name 'mafft' is not defined
+  File "/home/icipe/WNV/Snakefile", line 36, in <module>

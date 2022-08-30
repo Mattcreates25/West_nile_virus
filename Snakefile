@@ -30,36 +30,65 @@ rule index:
 
 rule align:
     input:
-        sequences = rules.parse.output.sequences
-	reference = data/req_seq.fasta
+        sequences = rules.parse.output.sequences,
+	reference = "data/refseq.fasta"
     params:
-        method = mafft
+        method = "mafft"
     output:
         alignment="results/all_alignment.fasta"
     shell:
         """
         augur align \
             --sequences {input.sequences} \
-	    --reference-sequence {input.reference}
+	    --reference-sequence {input.reference} \
             --method {params.method} \
             --output {output.alignment} \
 	    --fill-gaps
         """
-
 rule tree:
     input:
         alignment = rules.align.output.alignment
     output:
         tree = "results/tree.nwk"
-    params:
-	methods = iqtree
-	substmodel = GTR
     shell:
         """
         augur tree \
             --alignment {input.alignment} \
             --output {output.tree} \
-            --method {params.methods} \
-	    --substitution-model {params.substmodel} \
-	    --tree-builder-args="-ninit 2 -n 2 -me 0.05"
+            --method iqtree \
+            --substitution-model GTR \
+            --tree-builder-args="-ninit 2 -n 2 -me 0.05"
         """
+
+rule refine:
+    input:
+        tree = rules.tree.output.tree,
+        alignment = rules.align.output,
+        metadata = "results/newmeta.csv"
+    output:
+        tree = "results/new_tree.nwk",
+        node_data = "results/branches.json"
+    shell:
+        """
+        augur refine \
+            --tree {input.tree} \
+            --alignment {input.alignment} \
+            --metadata {input.metadata} \
+            --output-tree {output.tree} \
+            --output-node-data {output.node_data}
+        """
+
+rule export:
+    input:
+        tree  = rules.refine.output.tree,
+	node_data = rules.refine.output.node_data
+    output:
+        tree = "results/tree_auspice.json"
+    shell:
+        """
+        augur export v2 \
+            --tree {input.tree} \
+	    --node-data{input.node_data} \
+            --output {output.tree} 
+        """
+
