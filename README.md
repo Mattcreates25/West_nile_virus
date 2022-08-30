@@ -1,16 +1,18 @@
-# West_nile_virus
 # __Phylogenetic Analysis of the 2020 West Nile Virus (WNV) Outbreak in Andalusia (Spain)__
 
 ## introduction
-The Andalusian viral samples belonged to lineage 1 and were relatively similar to those of previous outbreaks which occurred in the Mediterranean region
-## Objectives
+
+The Andalusian viral samples belonged to lineage 1 and were relatively similar to those of previous outbreaks which occurred in the Mediterranean region.
+A phylogenetic analysis was performed on the obtained consensus genomes in the context of a world-wide representative set of WNVs 
+
+## Our objectives
 1. Download sequences
-2. Phylogenetic Analysis
+2. Phylogenetics Analysis
 3. Document your work in GitHub
 4. Prepare a presentation for the same
 
 ## workspace preparations 
-The first thing we did was create a working directory where we saved  our files. we initiated a git repo this way we could share our work on GitHub
+The first thing we did was create a working directory where we will save our files. we initiated a git repo this way we could share our work on GitHub
  
 
 ```bash
@@ -45,7 +47,7 @@ snakemake is the pipeline tool preferred by Nextstrain in simplifying augur comm
 
 ### install snakemake
 ```bash
-conda install snakemake
+conda install snakemake -c <channel>
 ```
 ## Sequence retrieval 
 download the sequences with wget
@@ -89,7 +91,8 @@ mv *.fasta data
 
 ## phylogenetic analysis
 
-The entire analysis can be run using snakemake workflow management. ```Snakemake``` breaks a workflow into a set of rules that are specified in a file called Snakefile. Each rule takes a number of input files, specifies a few parameters, and produces output files
+The entire analysis can be run using snakemake workflow management. ```Snakemake``` breaks a workflow into a set of rules that are specified
+in a file called Snakefile. Each rule takes a number of input files, specifies a few parameters, and produces output files
 
 Parse delimited fields from FASTA sequence names into a TSV and FASTA file using a ```Snakefile```  input in this code creates a metadata file
 alongside the fasta file and saved into a folder called results which will be used in subsequent steps
@@ -206,7 +209,7 @@ to export the tree due to metadata constraints as of now I used iTOL tree
 
 
 # view the tree 
-using auspice to do this a narrative file is necessary which can be found in ```narratives``` 
+to view the tree we will have to write a narrative.md file that works alongside the dataset directory. This can be found in  ```narratives``` 
 
 ```
 ---
@@ -231,4 +234,5 @@ auspice view --datasetDir results/ --narrativeDir narrative/
 
 
 ![paperstree](https://user-images.githubusercontent.com/97890823/187367745-caa5f985-3f3e-4bb5-8da8-675517646ea7.jpg)
+
 
