@@ -201,7 +201,7 @@ augur tree -a results/all_alignment.fasta -o results/tree.nwk --method iqtree --
 
 
 ## refine
-Branching date estimation was carried out with the least square dating (LSD2) method which is the default in augur align.
+Branching date estimation was carried out with the least square dating (LSD2) method which is the default.
 
 ```bash
 augur refine --tree results/tree.nwk -a results/all_alignment.fasta --metadata results/newmeta.csv --output-tree results/new_tree.nwk --output-node-data results/branches.json --keep-root
@@ -228,7 +228,7 @@ abstract: "This narrative will take us to auspice for vizualization."
 
 ```
 
-after this you can view your tree by running this line in bash this creates a localhost why your tree
+after this you can view your tree by running this line in bash this creates a localhost with your tree(click on the ```localhost 4000``` link)
 
 ```bash
 auspice view --datasetDir results/ --narrativeDir narrative/
