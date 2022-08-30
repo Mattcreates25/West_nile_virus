@@ -103,9 +103,9 @@ rule parse:
         sequences = "data/all_sequences.fasta"
     output:
         sequences = "results/all_sequencesP.fasta",
-        metadata = "results/all_metadata.tsv"
+        metadata = "results/all_metadata.csv"
     params:
-        fields = "site accession strain desciption"
+        fields = "strain"
     shell:
         """
         augur parse \
@@ -113,9 +113,11 @@ rule parse:
             --fields {params.fields} \
             --output-sequences {output.sequences} \
             --output-metadata {output.metadata}
+        """
+
 ```
 
-create a ```python``` script to split the accessions from the description in the metadata and mark the script as an executable file
+we Created a ```python``` script to split the accessions from the description in the metadata and mark the script as an executable file
 
 ```py
 # import the panda library
@@ -138,7 +140,7 @@ new_meta.to_csv('newmeta.csv',index=False)
 
 ```
 
-
+__marking the parse script as an executable file__
 ```bash
 touch parse.py
 chmod +x sample-script.py
@@ -150,7 +152,7 @@ augur index -s data/all_sequences.fasta -o results/sequence_index.tsv
 ```
 
 We then provide the sequence index as an input to augur filter commands to help in the filtering of sequence-specific attributes.
-__encountered a problem here cause of a conflict in metadata__
+__encountered a problem here cause of a conflict in metadata opted to skip the filter option and worked with the entire data set__
 
 ## error message
 ```bash
