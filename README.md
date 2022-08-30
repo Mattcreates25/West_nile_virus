@@ -193,7 +193,7 @@ augur align -s data/all_sequences.fasta -o results/all_alignment.fasta --method 
 ```
 
 ## generate tree
-The phylogenetic tree was recovered by maximum likelihood, using a general time reversible model 
+The phylogenetic tree was recovered by maximum likelihood, using a general time reversible model ```Augur version 14 +``` introduced --tree-builder-args which allows the user to create a tree with bootstrap values.
 
 ```bash
 augur tree -a results/all_alignment.fasta -o results/tree.nwk --method iqtree --substitution-model GTR -o results/tree.nwk --tree-builder-args="-ninit 2 -n 2 -me 0.05"
