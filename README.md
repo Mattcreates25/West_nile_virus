@@ -20,7 +20,7 @@ mkdir WNV
 cd WNV
 git init
 ```
-alternatively you can copy this github repo using ```git clone``` in your terminal
+you can copy this github repo using ```git clone``` in your terminal
 
 ```bash
 git clone git@github.com:Mattcreates25/West_nile_virus.git
