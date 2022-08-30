@@ -226,11 +226,13 @@ after this you can view your tree by running this line in bash this creates a lo
 auspice view --datasetDir results/ --narrativeDir narrative/
  
 ```
-![personaltree](https://user-images.githubusercontent.com/97890823/187367580-2477f803-d3d9-4206-961e-4b3c2937a40d.png)
-
 
 ![paperstree](https://user-images.githubusercontent.com/97890823/187367745-caa5f985-3f3e-4bb5-8da8-675517646ea7.jpg)
 
+![personaltree](https://user-images.githubusercontent.com/97890823/187367580-2477f803-d3d9-4206-961e-4b3c2937a40d.png)
 
-Sequences of the Spanish 2020 WNV outbreak ```OU``` the closest relatives from previous outbreaks in Italy and the sequence JF719069 from a lethal equine case in Andalusia (Spain) in 2010. Other Spanish outbreaks were: JF707789, from a mosquito in Huelva, and FJ766331 and FJ766332 from a golden eagle in Toledo. Other related outbreaks from the Mediterranean region (Cyprus MF797870), or adjacent locations (United Arab Emirates KU588135 and Russia MN149538) are also included.
+
+
+
+Sequences of the Spanish 2020 WNV outbreak ```OU``` the closest relatives from previous outbreaks in Italy and the sequence JF719069 from a lethal equine case in Andalusia (Spain) in 2010. Other Spanish outbreaks were: JF707789, from a mosquito in Huelva, FJ766331 and FJ766332 from a golden eagle in Toledo. Other related outbreaks from the Mediterranean region (Cyprus MF797870), or adjacent locations (United Arab Emirates KU588135 and Russia MN149538) are also included.
 
