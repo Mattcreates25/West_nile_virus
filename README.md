@@ -58,20 +58,19 @@ wget https://www.ebi.ac.uk/ena/browser/api/fasta/OU953895.1?download=true
 wget https://www.ebi.ac.uk/ena/browser/api/fasta/OU953896.1?download=true
 ```
 
+The reference sequence was downloaded from NCBI and saved into a file called ```refseq.fasta```
+
+[1][https://www.ncbi.nlm.nih.gov/nuccore/NC_009942.1]
+
+ The fasta sequences for the worldwide representative set of WNVs sequences were obtained using batch entrez and improted into a single file called 
+ WWR_sequences.fasta
+ accession numbers were retrieved from the ```viruses-13-00836-s001.zip``` which can be found in the ```Table S1.R3.xlsx.``` for retrieving purposes,
+ they were saved into a text file called ```WWrep_accession.txt``` this text file was then uploaded into batch entrez.
+ 
 combine the four sequences into a file that contains all the sequences then combined them with the ```WWR_sequences.fasta``` 
 ```bash
 cat OU* >> four_sequences.fasta | cat WWR_sequences.fasta >> all_sequences.fasta
 ```
-
-the reference sequence was downloaded from NCBI and saved into a file called ```refseq.fasta```
-[link][1]
-
-[1][https://www.ncbi.nlm.nih.gov/nuccore/NC_009942.1]
-
- the fasta sequences for the worldwide representative set of WNVs sequences were obtained using batch entrez and improted into a single file called 
- WWR_sequences.fasta
- accession numbers were retrieved from the ```viruses-13-00836-s001.zip``` which can be found in the ```Table S1.R3.xlsx.``` for retrieving purposes,
- they were saved into a text file called ```WWrep_accession.txt``` this text file was then uploaded into batch entrez
 
 ```bash
 wget https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8148183/bin/viruses-13-00836-s001.zip
@@ -174,42 +173,37 @@ To report this, please open a new issue including the original command and the e
 
 ```
 
-for alignment ```mafft``` is required. MAFFT (Multiple Alignment using Fast Fourier Transform) is high-speeded multiple sequence alignment program.
+for alignment ```mafft``` is required. MAFFT (Multiple Alignment using Fast Fourier Transform) and it is a high-speed multiple sequence alignment program.
 ```bash
 sudo apt install mafft iqtree raxml fasttree vcftools
 ```
 
-perform the MSA with Augur
+## perform the MSA with Augur
 ```bash
 augur align -s data/all_sequences.fasta -o results/all_alignment.fasta --method mafft --reference-sequence data/refseq.fasta --fill-gaps
 
 ```
 
-generate tree
+## generate tree
+The phylogenetic tree was recovered by maximum likelihood, using a general time reversible model 
+
 ```bash
 augur tree -a results/all_alignment.fasta -o results/tree.nwk --method iqtree --substitution-model GTR -o results/tree.nwk --tree-builder-args="-ninit 2 -n 2 -me 0.05"
-
 ```
 
 
-# refine
-
+## refine
 ```bash
 augur refine --tree results/tree.nwk -a results/all_alignment.fasta --metadata results/newmeta.csv --output-tree results/new_tree.nwk --output-node-data results/branches.json --keep-root
-
-
 ```
 
-# export
+## export
 ```bash
 augur export v2 -t results/new_tree.nwk --node-data results/branches.json --output results/tree_auspice.json
 ``` 
-to export the tree due to metadata constraints as of now I used iTOL tree
-
-
 
 # view the tree 
-to view the tree we will have to write a narrative.md file that works alongside the dataset directory. This can be found in  ```narratives``` 
+To view the tree we will have to write a ```narrative.md``` file that works alongside the dataset directory. This can be found in  ```narratives``` 
 
 ```
 ---
