@@ -2,6 +2,11 @@
 
 ## introduction
 The Andalusian viral samples belonged to lineage 1 and were relatively similar to those of previous outbreaks which occurred in the Mediterranean region
+## Objectives
+1. Download sequences
+2. Phylogenetics Analysis
+3. Document your work in GitHub
+4. Prepare a presentation for the same
 
 ## workspace preparations 
 The first thing we did was create a working directory where we will save our files. we initiated a git repo this way we could share our work on GitHub
@@ -21,6 +26,7 @@ Augur is a bioinformatics tool for phylogenetic analysis. the collection of comm
 ![Augur](https://docs.nextstrain.org/projects/augur/en/stable/_images/augur_analysis_sketch.png)
 
 For Augur to run we created a unique environment where we could install the package using miniconda 
+
 ### install augur
 ```bash
 conda create -n forAugur
@@ -28,12 +34,14 @@ conda activate forAugur
 conda install -c conda-forge -c bioconda augur
 ```
 Nextstrain’s auspice is an open-source interactive tool for visualizing phylogenetic data
+
 ### install auspice
 ```bash
 conda install -c conda-forge nodejs
 npm install --global auspice
 ```
 snakemake is the pipeline tool preferred by Nextstrain in simplifying augur commands
+
 ### install snakemake
 ```bash
 conda install snakemake
@@ -194,7 +202,6 @@ augur export v2 -t results/new_tree.nwk --node-data results/branches.json --outp
 ``` 
 to export the tree due to metadata constraints as of now I used iTOL tree
 
-![1 image](https://user-images.githubusercontent.com/97890823/186853004-83f14f42-99ef-47fd-abf5-9c56a327dcc4.png)
 
 
 # view the tree 
@@ -219,3 +226,8 @@ after this you can view your tree by running this line in bash this creates a lo
 auspice view --datasetDir results/ --narrativeDir narrative/
  
 ```
+![personaltree](https://user-images.githubusercontent.com/97890823/187367580-2477f803-d3d9-4206-961e-4b3c2937a40d.png)
+
+
+![paperstree](https://user-images.githubusercontent.com/97890823/187367745-caa5f985-3f3e-4bb5-8da8-675517646ea7.jpg)
+
