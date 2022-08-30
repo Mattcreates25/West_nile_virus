@@ -2,8 +2,8 @@
 
 ## introduction
 
-The Andalusian viral samples belonged to lineage 1 and were relatively similar to those of previous outbreaks which occurred in the Mediterranean region.
-A phylogenetic analysis was performed on the obtained consensus genomes in the context of a world-wide representative set of WNVs 
+West Nile virus (WNV), a member of the Flavivirus genus, is transmitted in an enzootic cycle involving birds as amplifying hosts and mosquitoes as vectors, which can ultimately be transmitted to mammals, considered dead-end hosts, causing disease outbreaks in horses and/or humans. Currently, the virus is considered a recurrent zoonosis with a wide geographic distribution. Phylogenetically, WNV is classified into eight lineages.The Andalusian viral samples belonged to lineage 1 and were relatively similar to those of previous outbreaks which occurred in the Mediterranean region.
+A phylogenetic analysis was performed on the obtained consensus genomes in the context of a world-wide representative set of WNVs. 
 
 ## Our objectives
 1. Download sequences
