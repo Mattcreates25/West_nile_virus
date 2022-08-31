@@ -1,4 +1,6 @@
-## run the ```Snakefile``` using: 
+### Find the ```Snakefile``` at this link  [WNV](https://github.com/Mattcreates25/West_nile_virus/blob/main/Snakefile)
+
+### If you want to run the ```Snakefile``` use these commands in bash: 
 
 ```bash
 snakemake
