@@ -1,0 +1,940 @@
+{
+  "alignment": "results/all_alignment.fasta",
+  "generated_by": {
+    "program": "augur",
+    "version": "17.0.0"
+  },
+  "input_tree": "results/tree.nwk",
+  "nodes": {
+    "DQ176636.2WestNilevirusstrainMadagascar-AnMg798_completegenome": {
+      "branch_length": 0.09633382
+    },
+    "DQ256376.1WestNilevirusstrain804994_completegenome": {
+      "branch_length": 0.0052267
+    },
+    "EF429197.1WestNilevirusSPU116/89_completegenome": {
+      "branch_length": 0.00501063
+    },
+    "EF429198.1WestNilevirusSA93/01_completegenome": {
+      "branch_length": 0.00815515
+    },
+    "EF429199.1WestNilevirusSA381/00_completegenome": {
+      "branch_length": 0.01897507
+    },
+    "EF429200.1WestNilevirusH442_completegenome": {
+      "branch_length": 0.00466
+    },
+    "FJ159129.1WestNilevirusisolate101_5-06-Uu_completegenome": {
+      "branch_length": 0.00730168
+    },
+    "FJ159130.1WestNilevirusisolate5_50-05-Uu_completegenome": {
+      "branch_length": 0.00847667
+    },
+    "FJ159131.1WestNilevirusisolate8_1-05-Uu_completegenome": {
+      "branch_length": 0.00698369
+    },
+    "FJ483548.1WestNilevirusstrain15217_completegenome": {
+      "branch_length": 0.00036299
+    },
+    "FJ483549.1WestNilevirusstrain15803_completegenome": {
+      "branch_length": 0.00054507
+    },
+    "FJ766331.1WestNilevirusisolateGE-1b/Bpolyproteinprecursor_gene_completecds": {
+      "branch_length": 0.0003658
+    },
+    "FJ766332.1WestNilevirusisolateGE-2o/Vpolyproteinprecursor_gene_completecds": {
+      "branch_length": 0.00018252
+    },
+    "GQ379160.1WestNilevirusstrainArEq001_completegenome": {
+      "branch_length": 0.00429879
+    },
+    "GQ379161.1WestNilevirusstrainArEq003_completegenome": {
+      "branch_length": 0.00641781
+    },
+    "GU011992.2WestNilevirusstrainIta09_completegenome": {
+      "branch_length": 9.068e-05
+    },
+    "HM051416.1WestNilevirusisolatetwn9_completegenome": {
+      "branch_length": 0.00331343
+    },
+    "HM147822.1WestNilevirusfromSouthAfrica_completegenome": {
+      "branch_length": 0.05175669
+    },
+    "HM147823.1WestNilevirusfromMadagascar_completegenome": {
+      "branch_length": 0.03587777
+    },
+    "HM147824.1WestNilevirusfromDemocraticRepublicoftheCongo_completegenome": {
+      "branch_length": 0.01044709
+    },
+    "HQ537483.1WestNilevirusisolateNeaSanta-Greece-2010_completegenome": {
+      "branch_length": 9.012e-05
+    },
+    "JF707789.1WestNilevirusstrainHU6365/08polyproteinprecursor_gene_completecds": {
+      "branch_length": 0.00240598
+    },
+    "JF719065.1WestNilevirusisolateItaly/2008/J-242853_completegenome": {
+      "branch_length": 2.4e-06
+    },
+    "JF719066.1WestNilevirusisolateItaly/2008/M-203204_completegenome": {
+      "branch_length": 0.00036597
+    },
+    "JF719067.1WestNilevirusisolateItaly/2009/G-223184_completegenome": {
+      "branch_length": 0.00036695
+    },
+    "JF719068.1WestNilevirusisolateItaly/2009/J-225677_completegenome": {
+      "branch_length": 0.00027511
+    },
+    "JF719069.1WestNilevirusisolateSpain/2010/H-1b_completegenome": {
+      "branch_length": 0.00648156
+    },
+    "JN393308.1WestNilevirusstrainHS101_08_completegenome": {
+      "branch_length": 0.00638981
+    },
+    "JN858069.1WestNilevirusisolateItaly/2011/AN-1_completegenome": {
+      "branch_length": 0.00028276
+    },
+    "JN858070.1WestNilevirusisolateItaly/2011/AN-2_completegenome": {
+      "branch_length": 0.00209784
+    },
+    "JQ928174.1WestNilevirusstrainItaly/2011/Livenza_completegenome": {
+      "branch_length": 0.00046702
+    },
+    "JQ928175.1WestNilevirusstrainItaly/2011/Piave_completegenome": {
+      "branch_length": 9.287e-05
+    },
+    "JX041628.1WestNilevirusstrainLEIV-72Az_completegenome": {
+      "branch_length": 0.00046449
+    },
+    "JX041629.1WestNilevirusstrainLEIV-1628Az_completegenome": {
+      "branch_length": 0.00027206
+    },
+    "JX041630.1WestNilevirusstrainLEIV-1640Az_completegenome": {
+      "branch_length": 2.25e-06
+    },
+    "JX041631.1WestNilevirusstrainLEIV-3266Ukr_completegenome": {
+      "branch_length": 0.00360943
+    },
+    "JX041632.1WestNilevirusstrainIg2266_completegenome": {
+      "branch_length": 0.00937425
+    },
+    "JX041634.1WestNilevirusstrainAst-986_completegenome": {
+      "branch_length": 0.00283305
+    },
+    "JX123030.1WestNilevirusisolateV11-03_completegenome": {
+      "branch_length": 0.00036632
+    },
+    "JX123031.1WestNilevirusisolateV11-07_completegenome": {
+      "branch_length": 0.00027213
+    },
+    "JX442279.1WestNilevirusstrainXJ11129_completegenome": {
+      "branch_length": 0.00799165
+    },
+    "JX556213.1WestNilevirusstrainItaly/2012/Livenza/31.1_completegenome": {
+      "branch_length": 0.00046667
+    },
+    "KC407667.1WestNilevirusstrainABB-B13_completegenome": {
+      "branch_length": 0.0001818
+    },
+    "KC407673.1WestNilevirusisolateSad/12_completegenome": {
+      "branch_length": 0.0028222
+    },
+    "KC496015.1WestNilevirusstrain578/10_completegenome": {
+      "branch_length": 0.00145493
+    },
+    "KC496016.1WestNilevirusstrainNoviSad-2010_completegenome": {
+      "branch_length": 0.00100067
+    },
+    "KC601756.1WestNilevirusisolate1048813_completegenome": {
+      "branch_length": 0.01198466
+    },
+    "KC954092.1WestNilevirusstrainItaly/2012/Livenza/37.1_completegenome": {
+      "branch_length": 0.00037934
+    },
+    "KF179639.1WestNilevirusstrainGreece/2012/Kavala/39.1_completegenome": {
+      "branch_length": 0.00072995
+    },
+    "KF179640.1WestNilevirusstrainAustria/2008_gh_completegenome": {
+      "branch_length": 0.00081944
+    },
+    "KF234080.1WestNilevirusstrainItaly/2009/FIN_completegenome": {
+      "branch_length": 0.00099994
+    },
+    "KF367469.1WestNilevirusisolateBVI2013_Heart_completegenome": {
+      "branch_length": 0.00167042
+    },
+    "KF588365.1WestNilevirusstrainItaly/2013/Rovigo/32.1_completegenome": {
+      "branch_length": 0.00036426
+    },
+    "KF647248.1WestNilevirusstrainItaly/2013/Rovigo/34.1_completegenome": {
+      "branch_length": 0.0002684
+    },
+    "KF647249.1WestNilevirusstrainItaly/2013/Rovigo/33.2_completegenome": {
+      "branch_length": 9.03e-05
+    },
+    "KF647250.1WestNilevirusstrainItaly/2013/Rovigo/33.1_completegenome": {
+      "branch_length": 0.0010141
+    },
+    "KF647251.1WestNilevirusstrainItaly/2013/Padova/34.1_completegenome": {
+      "branch_length": 0.00045558
+    },
+    "KF647252.1WestNilevirusstrainItaly/2013/Rovigo/35.1_completegenome": {
+      "branch_length": 2.4e-06
+    },
+    "KF647253.1WestNilevirusstrainItaly/2013/Livenza/35.1_completegenome": {
+      "branch_length": 0.00248962
+    },
+    "KJ883343.1WestNilevirusstrainGreece/2013/Xanthi_1_completegenome": {
+      "branch_length": 0.0004553
+    },
+    "KJ883344.1WestNilevirusstrainGreece/2013/Xanthi_2_completegenome": {
+      "branch_length": 9.096e-05
+    },
+    "KJ883345.1WestNilevirusstrainGreece/2013/Xanthi_3_completegenome": {
+      "branch_length": 9.031e-05
+    },
+    "KJ883346.1WestNilevirusstrainGreece/2013/Thessaloniki_4_completegenome": {
+      "branch_length": 0.00118456
+    },
+    "KJ883348.1WestNilevirusstrainGreece/2013/Kavala_2_completegenome": {
+      "branch_length": 9.097e-05
+    },
+    "KJ883349.1WestNilevirusstrainGreece/2013/Xanthi_5_completegenome": {
+      "branch_length": 0.00027389
+    },
+    "KJ958922.1WestNilevirusstrainT2_completegenome": {
+      "branch_length": 0.0059568
+    },
+    "KM203860.1WestNilevirusstrainCz13-104_completegenome": {
+      "branch_length": 0.00027325
+    },
+    "KM203861.1WestNilevirusstrainCz13-329_completegenome": {
+      "branch_length": 0.00109248
+    },
+    "KM203862.1WestNilevirusstrainCz13-479_completegenome": {
+      "branch_length": 0.00045484
+    },
+    "KM203863.1WestNilevirusstrainCz13-502_completegenome": {
+      "branch_length": 0.00081906
+    },
+    "KM659876.1WestNilevirusstrainBD-AUT_completegenome": {
+      "branch_length": 1e-06
+    },
+    "KP109691.1WestNilevirusstrainblooddonor/Vienna/2014_completegenome": {
+      "branch_length": 9.112e-05
+    },
+    "KP109692.1WestNilevirusstrainCx.pipiens/Vienna/2014_completegenome": {
+      "branch_length": 0.00091508
+    },
+    "KP780837.1WestNilevirusisolateSepperl_completegenome": {
+      "branch_length": 0.00082427
+    },
+    "KP780838.1WestNilevirusisolateMismo_completegenome": {
+      "branch_length": 0.00146209
+    },
+    "KP780839.1WestNilevirusisolateBerliner_completegenome": {
+      "branch_length": 0.0031131
+    },
+    "KP780840.1WestNilevirusisolateTammy_completegenome": {
+      "branch_length": 0.00679165
+    },
+    "KP789953.1WestNilevirusstrainItaly/2014/Pavia1_completegenome": {
+      "branch_length": 0.00036447
+    },
+    "KP789954.1WestNilevirusstrainItaly/2014/Cremona2_completegenome": {
+      "branch_length": 0.00036418
+    },
+    "KP789955.1WestNilevirusstrainItaly/2014/Verona/35.1_completegenome": {
+      "branch_length": 0.00054609
+    },
+    "KP789956.1WestNilevirusstrainItaly/2014/Verona/35.2_completegenome": {
+      "branch_length": 0.00082432
+    },
+    "KP789957.1WestNilevirusstrainItaly/2014/Cremona4_completegenome": {
+      "branch_length": 0.00063792
+    },
+    "KP789958.1WestNilevirusstrainItaly/2014/Pavia5_completegenome": {
+      "branch_length": 0.00063744
+    },
+    "KP789959.1WestNilevirusstrainItaly/2014/Pavia4_completegenome": {
+      "branch_length": 0.00091567
+    },
+    "KP789960.1WestNilevirusstrainItaly/2013/Mantova/36.1_completegenome": {
+      "branch_length": 0.0001827
+    },
+    "KT163243.1WestNilevirusisolate68856-ICDC-4_completegenome": {
+      "branch_length": 0.00143052
+    },
+    "KT207791.1WestNilevirusisolate792/14_completegenome": {
+      "branch_length": 0.00209897
+    },
+    "KT207792.1WestNilevirusisolate1270/14_completegenome": {
+      "branch_length": 9.097e-05
+    },
+    "KT359349.1WestNilevirusstrain2014/hun_completegenome": {
+      "branch_length": 0.00201356
+    },
+    "KU206781.1WestNilevirusstrainBulgaria/2015/Sofia_completegenome": {
+      "branch_length": 0.00045552
+    },
+    "KU588135.1WestNilevirusisolatecamel_completegenome": {
+      "branch_length": 0.01341757
+    },
+    "KX547235.1WestNilevirusstrainWNV-1/Culexsp./USA/15350183/2015_completegenome": {
+      "branch_length": 0.00580634
+    },
+    "KY523178.1WestNilevirusisolateUG2274/Uganda/2009_completegenome": {
+      "branch_length": 0.00383158
+    },
+    "KY594040.1WestNilevirusisolate341/2010_completegenome": {
+      "branch_length": 0.00038141
+    },
+    "LC318700.1WestNilevirusgenomicRNA_completegenome_strain_Zmq16m11": {
+      "branch_length": 0.00567077
+    },
+    "MF797870.1WestNilevirusstrainWNV_Cy2016_completegenome": {
+      "branch_length": 0.0102112
+    },
+    "MF984341.1WestNilevirusstrainBlooddonorBlooddonor5/Austria/2015_BD5/15__completegenome": {
+      "branch_length": 0.00112763
+    },
+    "MF984342.1WestNilevirusstrainPatient1/Austria/2015_Pa1/15__completegenome": {
+      "branch_length": 0.00074013
+    },
+    "MF984343.1WestNilevirusstrainPatient2/Austria/2015_Pa2/15__completegenome": {
+      "branch_length": 0.00018186
+    },
+    "MF984344.1WestNilevirusstrainGoshawk/Austria/2015_Bi1/15__completegenome": {
+      "branch_length": 0.00054557
+    },
+    "MF984345.1WestNilevirusstrainFalcon/Austria/2015_Bi2/15__completegenome": {
+      "branch_length": 0.00072781
+    },
+    "MF984349.1WestNilevirusstrainHorse1/Austria/2016_Ho1/16__completegenome": {
+      "branch_length": 0.00084066
+    },
+    "MF984350.1WestNilevirusstrainHorse2/Austria/2016_Ho2/16__completegenome": {
+      "branch_length": 0.00036425
+    },
+    "MG004528.1WestNilevirusisolateRT121_completegenome": {
+      "branch_length": 0.00037141
+    },
+    "MG004530.1WestNilevirusisolateRT279_completegenome": {
+      "branch_length": 0.00171415
+    },
+    "MG004531.1WestNilevirusisolateRT335_completegenome": {
+      "branch_length": 0.00092894
+    },
+    "MG004532.1WestNilevirusisolateRT395_completegenome": {
+      "branch_length": 0.0016785
+    },
+    "MG004534.1WestNilevirusisolateRT443_completegenome": {
+      "branch_length": 0.00111481
+    },
+    "MG004536.1WestNilevirusisolateRT517_completegenome": {
+      "branch_length": 0.00371999
+    },
+    "MG004540.1WestNilevirusisolateRT825_completegenome": {
+      "branch_length": 0.00534131
+    },
+    "MG004541.1WestNilevirusisolateRT496_completegenome": {
+      "branch_length": 0.00223692
+    },
+    "MH021189.1WestNilevirusisolateWNV/Belgium/2017/Antwerpen_completegenome": {
+      "branch_length": 0.0010879
+    },
+    "MH244510.1WestNilevirusstrain486.B/2014/VelkyBiel/SVK_completegenome": {
+      "branch_length": 0.00045437
+    },
+    "MH244511.1WestNilevirusstrain291.B/2013/VelkyBiel/SVK_completegenome": {
+      "branch_length": 0.00045512
+    },
+    "MH244512.1WestNilevirusstrain286.B/2013/VelkyBiel/SVK_completegenome": {
+      "branch_length": 0.00154488
+    },
+    "MH244513.1WestNilevirusstrain200.B/2013/Secovce/SVK_completegenome": {
+      "branch_length": 0.00173011
+    },
+    "MH643887.1WestNilevirusstrainBeAn854747_completegenome": {
+      "branch_length": 0.01017722
+    },
+    "MH924836.1WestNilevirusisolateED-I-33/18-UM_completegenome": {
+      "branch_length": 0.00018098
+    },
+    "MH939153.1WestNilevirusstrainDD58c_completegenome": {
+      "branch_length": 0.00247686
+    },
+    "MH939154.1WestNilevirusstrainDD84c_completegenome": {
+      "branch_length": 0.00183287
+    },
+    "MH986055.1WestNilevirusstrain1382/2018/Berlin/Ger_completegenome": {
+      "branch_length": 0.00045441
+    },
+    "MH986056.1WestNilevirusstrain1617/2018/Rostock/Ger_completegenome": {
+      "branch_length": 2.12e-06
+    },
+    "MK352483.1WestNilevirusisolateDC-343_completegenome": {
+      "branch_length": 0.00489616
+    },
+    "MN149538.1WestNilevirusstrainTomsk/bird/2006/A4_completegenome": {
+      "branch_length": 0.00819013
+    },
+    "MN480792.1WestNilevirusisolateThessaloniki_354h/2018_completegenome": {
+      "branch_length": 0.00055034
+    },
+    "MN480793.1WestNilevirusisolatePella_435h/2018_completegenome": {
+      "branch_length": 9.111e-05
+    },
+    "MN480794.1WestNilevirusisolateThessaloniki_MC139m/2018_completegenome": {
+      "branch_length": 0.00164256
+    },
+    "MN480795.1WestNilevirusisolatePella_677h/2018_completegenome": {
+      "branch_length": 0.00018302
+    },
+    "MN481589.1WestNilevirusisolateS33b_GrM_2018/Thessaloniki_completegenome": {
+      "branch_length": 1.76e-06
+    },
+    "MN481590.1WestNilevirusisolateS14c_GrM_2018/Thessaloniki_completegenome": {
+      "branch_length": 0.00082563
+    },
+    "MN481591.1WestNilevirusisolateS38b_GrTh_2018/Rhodope_completegenome": {
+      "branch_length": 0.00137791
+    },
+    "MN481592.1WestNilevirusisolateS33_GrM_2012/Thessaloniki_1_completegenome": {
+      "branch_length": 0.00018263
+    },
+    "MN481593.1WestNilevirusisolateS34_GrM_2012/Thessaloniki_2_completegenome": {
+      "branch_length": 0.00082544
+    },
+    "MN481594.1WestNilevirusisolateS35_GrM_2012/Pella_completegenome": {
+      "branch_length": 2.34e-06
+    },
+    "MN481595.1WestNilevirusisolateS36_GrM_2010/Thessaloniki_completegenome": {
+      "branch_length": 0.00018294
+    },
+    "MN481596.1WestNilevirusisolateS37_GrM_2011/Thessaloniki_completegenome": {
+      "branch_length": 0.00119312
+    },
+    "MN481597.1WestNilevirusisolateS38_GrM_2012/Imathia_completegenome": {
+      "branch_length": 0.00107562
+    },
+    "MN619801.1WestNilevirusisolateVolgograd696/18_completegenome": {
+      "branch_length": 0.01047416
+    },
+    "MN619802.1WestNilevirusisolateVolgograd723/18_completegenome": {
+      "branch_length": 0.00478708
+    },
+    "MN619803.1WestNilevirusisolateVolgograd829/18_completegenome": {
+      "branch_length": 0.00027312
+    },
+    "MN652878.1WestNilevirusisolateThessaloniki_MC26m/2018_completegenome": {
+      "branch_length": 0.00018337
+    },
+    "MN652879.1WestNilevirusisolatePella_MC36m/2018_completegenome": {
+      "branch_length": 9.165e-05
+    },
+    "MN652880.1WestNilevirusisolateThessaloniki_MC82m/2018_completegenome": {
+      "branch_length": 0.00036616
+    },
+    "MN794935.1WestNilevirusstrainBNI-10/19_completegenome": {
+      "branch_length": 0.0009981
+    },
+    "MN794937.1WestNilevirusstrainBNI-2635_completegenome": {
+      "branch_length": 0.00070824
+    },
+    "MN794938.1WestNilevirusstrainBNI-2615_completegenome": {
+      "branch_length": 0.00019777
+    },
+    "MN794939.1WestNilevirusstrainBNI-2432_completegenome": {
+      "branch_length": 0.00027184
+    },
+    "MN849176.1WestNilevirusisolate2019-DC-66_completegenome": {
+      "branch_length": 0.00065078
+    },
+    "MT341470.1WestNilevirusisolateLarisa-3m-Greece-2019_completegenome": {
+      "branch_length": 0.00027862
+    },
+    "MT341471.1WestNilevirusisolateKarditsa-13m-Greece-2019_completegenome": {
+      "branch_length": 0.00018557
+    },
+    "MT341472.1WestNilevirusisolatePleven_10m-Bulgaria-2018_completegenome": {
+      "branch_length": 0.00279157
+    },
+    "NC_009942.1": {
+      "branch_length": 0.00027271
+    },
+    "NODE_0000000": {
+      "branch_length": 0.001
+    },
+    "NODE_0000001": {
+      "branch_length": 0.00036364
+    },
+    "NODE_0000002": {
+      "branch_length": 9.072e-05
+    },
+    "NODE_0000003": {
+      "branch_length": 0.00026186
+    },
+    "NODE_0000004": {
+      "branch_length": 2.33e-06
+    },
+    "NODE_0000005": {
+      "branch_length": 0.00036432
+    },
+    "NODE_0000006": {
+      "branch_length": 0.00056048
+    },
+    "NODE_0000007": {
+      "branch_length": 0.0001639
+    },
+    "NODE_0000008": {
+      "branch_length": 0.00343488
+    },
+    "NODE_0000009": {
+      "branch_length": 0.00018632
+    },
+    "NODE_0000010": {
+      "branch_length": 0.00089382
+    },
+    "NODE_0000011": {
+      "branch_length": 0.00162767
+    },
+    "NODE_0000012": {
+      "branch_length": 8.719e-05
+    },
+    "NODE_0000013": {
+      "branch_length": 9.492e-05
+    },
+    "NODE_0000014": {
+      "branch_length": 0.00018953
+    },
+    "NODE_0000015": {
+      "branch_length": 2.01e-06
+    },
+    "NODE_0000016": {
+      "branch_length": 0.01292569
+    },
+    "NODE_0000017": {
+      "branch_length": 0.0101842
+    },
+    "NODE_0000018": {
+      "branch_length": 0.00084946
+    },
+    "NODE_0000019": {
+      "branch_length": 0.00610862
+    },
+    "NODE_0000020": {
+      "branch_length": 0.00106868
+    },
+    "NODE_0000021": {
+      "branch_length": 0.01061098
+    },
+    "NODE_0000022": {
+      "branch_length": 0.00041966
+    },
+    "NODE_0000023": {
+      "branch_length": 0.00321145
+    },
+    "NODE_0000024": {
+      "branch_length": 0.00253603
+    },
+    "NODE_0000025": {
+      "branch_length": 0.00040459
+    },
+    "NODE_0000026": {
+      "branch_length": 0.00979674
+    },
+    "NODE_0000027": {
+      "branch_length": 0.00820645
+    },
+    "NODE_0000028": {
+      "branch_length": 9.285e-05
+    },
+    "NODE_0000029": {
+      "branch_length": 2.22e-06
+    },
+    "NODE_0000030": {
+      "branch_length": 0.00039438
+    },
+    "NODE_0000031": {
+      "branch_length": 0.00638304
+    },
+    "NODE_0000032": {
+      "branch_length": 0.000632
+    },
+    "NODE_0000033": {
+      "branch_length": 0.00315571
+    },
+    "NODE_0000034": {
+      "branch_length": 0.00222296
+    },
+    "NODE_0000035": {
+      "branch_length": 0.00896624
+    },
+    "NODE_0000036": {
+      "branch_length": 2.77e-06
+    },
+    "NODE_0000037": {
+      "branch_length": 2.88e-06
+    },
+    "NODE_0000038": {
+      "branch_length": 0.00351784
+    },
+    "NODE_0000039": {
+      "branch_length": 2.72e-06
+    },
+    "NODE_0000040": {
+      "branch_length": 2.11e-06
+    },
+    "NODE_0000041": {
+      "branch_length": 9.06e-05
+    },
+    "NODE_0000042": {
+      "branch_length": 2.25e-06
+    },
+    "NODE_0000043": {
+      "branch_length": 0.00054457
+    },
+    "NODE_0000044": {
+      "branch_length": 0.00018143
+    },
+    "NODE_0000045": {
+      "branch_length": 0.01241083
+    },
+    "NODE_0000046": {
+      "branch_length": 0.0088414
+    },
+    "NODE_0000047": {
+      "branch_length": 0.00995821
+    },
+    "NODE_0000048": {
+      "branch_length": 0.01188322
+    },
+    "NODE_0000049": {
+      "branch_length": 2.07e-06
+    },
+    "NODE_0000050": {
+      "branch_length": 0.04908985
+    },
+    "NODE_0000051": {
+      "branch_length": 0.07184484
+    },
+    "NODE_0000052": {
+      "branch_length": 0.0763168
+    },
+    "NODE_0000053": {
+      "branch_length": 0.13023427
+    },
+    "NODE_0000054": {
+      "branch_length": 0.04526157
+    },
+    "NODE_0000055": {
+      "branch_length": 0.19664629
+    },
+    "NODE_0000056": {
+      "branch_length": 0.00570095
+    },
+    "NODE_0000057": {
+      "branch_length": 0.06392631
+    },
+    "NODE_0000058": {
+      "branch_length": 0.04756706
+    },
+    "NODE_0000059": {
+      "branch_length": 0.03017056
+    },
+    "NODE_0000060": {
+      "branch_length": 0.01586403
+    },
+    "NODE_0000061": {
+      "branch_length": 0.00168232
+    },
+    "NODE_0000062": {
+      "branch_length": 0.00258906
+    },
+    "NODE_0000063": {
+      "branch_length": 0.00223952
+    },
+    "NODE_0000064": {
+      "branch_length": 0.01401956
+    },
+    "NODE_0000065": {
+      "branch_length": 0.00186839
+    },
+    "NODE_0000066": {
+      "branch_length": 0.00103571
+    },
+    "NODE_0000067": {
+      "branch_length": 0.00515191
+    },
+    "NODE_0000068": {
+      "branch_length": 4.07e-05
+    },
+    "NODE_0000069": {
+      "branch_length": 0.00358948
+    },
+    "NODE_0000070": {
+      "branch_length": 0.00555402
+    },
+    "NODE_0000071": {
+      "branch_length": 0.00400395
+    },
+    "NODE_0000072": {
+      "branch_length": 0.00055221
+    },
+    "NODE_0000073": {
+      "branch_length": 0.00286415
+    },
+    "NODE_0000074": {
+      "branch_length": 0.00073479
+    },
+    "NODE_0000075": {
+      "branch_length": 0.0117409
+    },
+    "NODE_0000076": {
+      "branch_length": 0.00183985
+    },
+    "NODE_0000077": {
+      "branch_length": 7.332e-05
+    },
+    "NODE_0000078": {
+      "branch_length": 0.0014527
+    },
+    "NODE_0000079": {
+      "branch_length": 0.00058683
+    },
+    "NODE_0000080": {
+      "branch_length": 0.00020676
+    },
+    "NODE_0000081": {
+      "branch_length": 0.00117283
+    },
+    "NODE_0000082": {
+      "branch_length": 0.00219349
+    },
+    "NODE_0000083": {
+      "branch_length": 9.085e-05
+    },
+    "NODE_0000084": {
+      "branch_length": 2.02e-06
+    },
+    "NODE_0000085": {
+      "branch_length": 0.00065027
+    },
+    "NODE_0000086": {
+      "branch_length": 2.65e-06
+    },
+    "NODE_0000087": {
+      "branch_length": 9.089e-05
+    },
+    "NODE_0000088": {
+      "branch_length": 2.89e-06
+    },
+    "NODE_0000089": {
+      "branch_length": 2.12e-06
+    },
+    "NODE_0000090": {
+      "branch_length": 9.16e-05
+    },
+    "NODE_0000091": {
+      "branch_length": 9.431e-05
+    },
+    "NODE_0000092": {
+      "branch_length": 9.526e-05
+    },
+    "NODE_0000093": {
+      "branch_length": 0.00210341
+    },
+    "NODE_0000094": {
+      "branch_length": 0.0004772
+    },
+    "NODE_0000095": {
+      "branch_length": 0.00200628
+    },
+    "NODE_0000096": {
+      "branch_length": 0.00018085
+    },
+    "NODE_0000097": {
+      "branch_length": 2.61e-06
+    },
+    "NODE_0000098": {
+      "branch_length": 9.083e-05
+    },
+    "NODE_0000099": {
+      "branch_length": 2.4e-06
+    },
+    "NODE_0000100": {
+      "branch_length": 9.472e-05
+    },
+    "NODE_0000101": {
+      "branch_length": 2.71e-06
+    },
+    "NODE_0000102": {
+      "branch_length": 2.52e-06
+    },
+    "NODE_0000103": {
+      "branch_length": 0.00036688
+    },
+    "NODE_0000104": {
+      "branch_length": 0.00057196
+    },
+    "NODE_0000105": {
+      "branch_length": 0.00018236
+    },
+    "NODE_0000106": {
+      "branch_length": 0.00039242
+    },
+    "NODE_0000107": {
+      "branch_length": 0.00042983
+    },
+    "NODE_0000108": {
+      "branch_length": 0.00018387
+    },
+    "NODE_0000109": {
+      "branch_length": 9.153e-05
+    },
+    "NODE_0000110": {
+      "branch_length": 0.00018351
+    },
+    "NODE_0000111": {
+      "branch_length": 2.86e-06
+    },
+    "NODE_0000112": {
+      "branch_length": 0.00090964
+    },
+    "NODE_0000113": {
+      "branch_length": 9.041e-05
+    },
+    "NODE_0000114": {
+      "branch_length": 0.0003638
+    },
+    "NODE_0000115": {
+      "branch_length": 0.00036349
+    },
+    "NODE_0000116": {
+      "branch_length": 2.4e-06
+    },
+    "NODE_0000117": {
+      "branch_length": 0.00018511
+    },
+    "NODE_0000118": {
+      "branch_length": 0.00018366
+    },
+    "NODE_0000119": {
+      "branch_length": 9.493e-05
+    },
+    "NODE_0000120": {
+      "branch_length": 0.00018261
+    },
+    "NODE_0000121": {
+      "branch_length": 8.959e-05
+    },
+    "NODE_0000122": {
+      "branch_length": 2.92e-06
+    },
+    "NODE_0000123": {
+      "branch_length": 0.00091091
+    },
+    "NODE_0000124": {
+      "branch_length": 0.00145748
+    },
+    "NODE_0000125": {
+      "branch_length": 2.47e-06
+    },
+    "NODE_0000126": {
+      "branch_length": 9.072e-05
+    },
+    "NODE_0000127": {
+      "branch_length": 2.53e-06
+    },
+    "NODE_0000128": {
+      "branch_length": 2.96e-06
+    },
+    "NODE_0000129": {
+      "branch_length": 0.0001204
+    },
+    "NODE_0000130": {
+      "branch_length": 0.00072919
+    },
+    "NODE_0000131": {
+      "branch_length": 9.052e-05
+    },
+    "NODE_0000132": {
+      "branch_length": 0.00018199
+    },
+    "NODE_0000133": {
+      "branch_length": 2.34e-06
+    },
+    "NODE_0000134": {
+      "branch_length": 2.79e-06
+    },
+    "NODE_0000135": {
+      "branch_length": 2.36e-06
+    },
+    "NODE_0000136": {
+      "branch_length": 0.00027279
+    },
+    "NODE_0000137": {
+      "branch_length": 2.4e-06
+    },
+    "NODE_0000138": {
+      "branch_length": 2.71e-06
+    },
+    "NODE_0000139": {
+      "branch_length": 0.00054525
+    },
+    "NODE_0000140": {
+      "branch_length": 8.731e-05
+    },
+    "NODE_0000141": {
+      "branch_length": 0.00064313
+    },
+    "NODE_0000142": {
+      "branch_length": 9.057e-05
+    },
+    "NODE_0000143": {
+      "branch_length": 0.00072856
+    },
+    "NODE_0000144": {
+      "branch_length": 8.975e-05
+    },
+    "NODE_0000145": {
+      "branch_length": 0.00081813
+    },
+    "NODE_0000146": {
+      "branch_length": 0.00036785
+    },
+    "NODE_0000147": {
+      "branch_length": 9.233e-05
+    },
+    "NODE_0000148": {
+      "branch_length": 0.00091916
+    },
+    "NODE_0000149": {
+      "branch_length": 0.00045324
+    },
+    "NODE_0000150": {
+      "branch_length": 2.33e-06
+    },
+    "NODE_0000151": {
+      "branch_length": 0.00025529
+    },
+    "NODE_0000152": {
+      "branch_length": 0.00054448
+    },
+    "NODE_0000153": {
+      "branch_length": 0.00019776
+    },
+    "OU953895.1WestNilevirusisolatenot_providedgenomeassembly_completegenome_monopartite": {
+      "branch_length": 0.00028596
+    },
+    "OU953896.1WestNilevirusisolatenot_providedgenomeassembly_completegenome_monopartite": {
+      "branch_length": 0.00019137
+    },
+    "OU953897.1WestNilevirusisolatenot_providedgenomeassembly_completegenome_monopartite": {
+      "branch_length": 0.00019257
+    },
+    "OU953898.1WestNilevirusisolatenot_providedgenomeassembly_completegenome_monopartite": {
+      "branch_length": 0.00072733
+    }
+  }
+}

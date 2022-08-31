@@ -55,6 +55,15 @@ snakemake is the pipeline tool preferred by Nextstrain in simplifying augur comm
 ```bash
 conda install snakemake -c <channel>
 ```
+If you want to run the ```Snakefile``` use these commands
+```bash
+snakemake
+snakemake --cores 1 results/all_alignment.fasta
+snakemake --cores 1 results/tree.nwk
+snakemake --cores 1 results/branches.json
+``` 
+
+
 ## Sequence retrieval 
 download the sequences with wget
 ```bash
@@ -245,5 +254,9 @@ auspice view --datasetDir results/ --narrativeDir narrative/
 Sequences of the Spanish 2020 WNV outbreak ```OU``` the closest relatives from previous outbreaks in Italy and the sequence JF719069 from a lethal equine case in Andalusia (Spain) in 2010. Other Spanish outbreaks were: JF707789, from a mosquito in Huelva, FJ766331 and FJ766332 from a golden eagle in Toledo. Other related outbreaks from the Mediterranean region (Cyprus MF797870), or adjacent locations (United Arab Emirates KU588135 and Russia MN149538) are also included.
 
 ## future
-use UFboot to  generate bootstrap values
 calculate non-synonymous to synonymous ratios along the viral genomes using the ```KaKs_Calculator```
+
+install a kaks calulator with conda using bioconda as a channel
+```bash
+conda install -c bioconda kakscalculator2
+```
