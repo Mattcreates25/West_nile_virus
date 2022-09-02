@@ -83,12 +83,13 @@ rule export:
         tree  = rules.refine.output.tree,
 	node_data = rules.refine.output.node_data
     output:
-        tree = "results/tree_auspice.json"
+        tree = "results/branches_na.json"
     shell:
         """
         augur export v2 \
             --tree {input.tree} \
-	    --node-data{input.node_data} \
-            --output {output.tree} 
+	    --node-data {input.node_data} \
+            --output {output.tree} \
+	    --skip-validation
         """
 

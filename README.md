@@ -63,6 +63,26 @@ snakemake --cores 1 results/tree.nwk
 snakemake --cores 1 results/branches.json
 ``` 
 
+__output__
+
+```bash
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	refine
+	1
+
+[Fri Sep  2 10:43:00 2022]
+rule refine:
+    input: results/tree.nwk, results/all_alignment.fasta, results/newmeta.csv
+    output: results/new_tree.nwk, results/branches.json
+    jobid: 0
+ ```
+
+A message similar to this one is generated for each command run
 
 ## Sequence retrieval 
 download the sequences with wget
@@ -197,7 +217,8 @@ augur align -s data/all_sequences.fasta -o results/all_alignment.fasta --method 
 The phylogenetic tree was recovered by maximum likelihood, using a general time reversible model ```Augur version 14 +``` introduced --tree-builder-args which allows the user to create a tree with bootstrap values.
 
 ```bash
-augur tree -a results/all_alignment.fasta -o results/tree.nwk --method iqtree --substitution-model GTR -o results/tree.nwk --tree-builder-args="-ninit 2 -n 2 -me 0.05"
+augur tree -a results/all_alignment.fasta -o results/tree.nwk --method iqtree \
+--substitution-model GTR -o results/tree.nwk --tree-builder-args="-ninit 2 -n 2 -me 0.05"
 ```
 
 
@@ -205,12 +226,17 @@ augur tree -a results/all_alignment.fasta -o results/tree.nwk --method iqtree --
 Branching date estimation was carried out with the least square dating (LSD2) method which is the default.
 
 ```bash
-augur refine --tree results/tree.nwk -a results/all_alignment.fasta --metadata results/newmeta.csv --output-tree results/new_tree.nwk --output-node-data results/branches.json --keep-root
+augur refine --tree results/tree.nwk -a results/all_alignment.fasta --metadata results/newmeta.csv \
+ --output-tree results/new_tree.nwk --output-node-data results/branches.json --keep-root
 ```
 
 ## export
 ```bash
-augur export v2 -t results/new_tree.nwk --node-data results/branches.json --output results/tree_auspice.json
+augur export v2 -t results/new_tree.nwk --node-data results/branches.json --output results/branches_na.json \
+ --title 'West Nile Virus Outbreak in Andalusia' --maintainers 'mark https://github.com/Mattcreates25' \
+ --panels tree --metadata results/newmeta.csv --skip-validation
+
+
 ``` 
 
 # view the tree 

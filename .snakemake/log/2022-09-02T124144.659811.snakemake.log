@@ -1,0 +1,19 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	export
+	1
+
+[Fri Sep  2 12:41:44 2022]
+rule export:
+    input: results/new_tree.nwk, results/branches.json
+    output: results/tree_auspice.json
+    jobid: 0
+
+[Fri Sep  2 12:41:45 2022]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: /home/icipe/WNV/.snakemake/log/2022-09-02T124144.659811.snakemake.log
