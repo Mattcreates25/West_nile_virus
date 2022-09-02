@@ -84,7 +84,8 @@ The reference sequence was downloaded from NCBI and saved into a file called ```
  
 combine the four sequences into a file that contains all the sequences then combined them with the ```WWR_sequences.fasta``` 
 ```bash
-cat OU* >> four_sequences.fasta | cat WWR_sequences.fasta >> all_sequences.fasta
+cat OU* >> four_sequences.fasta 
+cat WWR_sequences.fasta four_sequences.fasta >> all_sequences.fasta
 ```
 
 ```bash
