@@ -55,7 +55,7 @@ snakemake is the pipeline tool preferred by Nextstrain in simplifying augur comm
 ```bash
 conda install snakemake -c <channel>
 ```
-If you want to run the ```Snakefile``` use these commands
+If you want to run the ```Snakefile``` use the commands found in the ```snakemake.md```
 ```bash
 snakemake
 snakemake --cores 1 results/all_alignment.fasta
@@ -171,22 +171,13 @@ __encountered a problem here cause of a conflict in metadata opted to skip the f
 
 ## error message
 ```bash
-augur filter --sequences data/all_sequences.fasta --metadata results/all_metadata.csv --sequence-index results/sequence_index.tsv  --output filtered.fasta 
+augur filter --sequences data/all_sequences.fasta --metadata results/newmeta.csv --sequence-index results/sequence_index.tsv  --output filtered.fasta 
 ```
 ```bash
-Traceback (most recent call last):
-  File "/home/icipe/miniconda3/envs/forAugur/lib/python3.10/site-packages/augur/__init__.py", line 65, in run
-    return args.__command__.run(args)
-  File "/home/icipe/miniconda3/envs/forAugur/lib/python3.10/site-packages/augur/filter.py", line 1400, in run
-    metadata_reader = read_metadata(
-  File "/home/icipe/miniconda3/envs/forAugur/lib/python3.10/site-packages/augur/io/metadata.py", line 76, in read_metadata
-    raise Exception(f"None of the possible id columns ({id_columns! r}) were found in the metadata's columns {tuple(chunk.columns)!r}")
-Exception: None of the possible id columns (['strain', 'name']) were found in the metadata's columns ('s', 'rain')
-
-
-An error occurred (see above) that has not been properly handled by Augur.
-To report this, please open a new issue including the original command and the error above:
-    <https://github.com/nextstrain/augur/issues/new/choose>
+310 strains were dropped during filtering
+	155 had no metadata
+	155 had no sequence data
+ERROR: All samples have been dropped! Check filter rules and metadata file format.
 
 ```
 
