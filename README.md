@@ -2,12 +2,12 @@
 
 ## introduction
 
-West Nile virus (WNV), a member of the Flavivirus genus, is transmitted in an enzootic cycle involving birds as amplifying hosts and mosquitoes as vectors, which can ultimately be transmitted to mammals, considered dead-end hosts, causing disease outbreaks in horses and/or humans. Currently, the virus is considered a recurrent zoonosis with a wide geographic distribution. Phylogenetically, WNV is classified into eight lineages.The Andalusian viral samples belonged to lineage 1 and were relatively similar to those of previous outbreaks which occurred in the Mediterranean region.
+West Nile virus (WNV), a member of the Flavivirus genus, is transmitted in an enzootic cycle involving birds as amplifying hosts and mosquitoes as vectors, which can ultimately be transmitted to mammals, considered dead-end hosts, causing disease outbreaks in horses and/or humans. Currently, the virus is considered a recurrent zoonosis with a wide geographic distribution. Phylogenetically, WNV is classified into eight lineages. The Andalusian viral samples belonged to lineage 1 and were relatively similar to those of previous outbreaks which occurred in the Mediterranean region.
 A phylogenetic analysis was performed on the obtained consensus genomes in the context of a world-wide representative set of WNVs. 
 
 ## Our objectives
 1. Download sequences
-2. Phylogenetics Analysis
+2. Phylogenetic Analysis
 3. Document your work in GitHub
 4. Prepare a presentation for the same
 
@@ -77,7 +77,7 @@ The reference sequence was downloaded from NCBI and saved into a file called ```
 
 [1][https://www.ncbi.nlm.nih.gov/nuccore/NC_009942.1]
 
- The fasta sequences for the worldwide representative set of WNVs sequences were obtained using batch entrez and improted into a single file called 
+ The fasta sequences for the worldwide representative set of WNVs sequences were obtained using batch entrez and imported into a single file called 
  WWR_sequences.fasta
  accession numbers were retrieved from the ```viruses-13-00836-s001.zip``` which can be found in the ```Table S1.R3.xlsx.``` for retrieving purposes,
  they were saved into a text file called ```WWrep_accession.txt``` this text file was then uploaded into batch entrez.
@@ -108,7 +108,7 @@ mv *.fasta data
 The entire analysis can be run using snakemake workflow management. ```Snakemake``` breaks a workflow into a set of rules that are specified
 in a file called Snakefile. Each rule takes a number of input files, specifies a few parameters, and produces output files
 
-Parse delimited fields from FASTA sequence names into a TSV and FASTA file using a ```Snakefile```  input in this code creates a metadata file
+Parse delimited fields from FASTA sequence names into a TSV and FASTA file using a ```Snakefile```   input in this code creates a metadata file
 alongside the fasta file and saved into a folder called results which will be used in subsequent steps
 to do this we created a Snakemake file and used the augur parse command
 
@@ -180,7 +180,7 @@ Traceback (most recent call last):
   File "/home/icipe/miniconda3/envs/forAugur/lib/python3.10/site-packages/augur/filter.py", line 1400, in run
     metadata_reader = read_metadata(
   File "/home/icipe/miniconda3/envs/forAugur/lib/python3.10/site-packages/augur/io/metadata.py", line 76, in read_metadata
-    raise Exception(f"None of the possible id columns ({id_columns!r}) were found in the metadata's columns {tuple(chunk.columns)!r}")
+    raise Exception(f"None of the possible id columns ({id_columns! r}) were found in the metadata's columns {tuple(chunk.columns)!r}")
 Exception: None of the possible id columns (['strain', 'name']) were found in the metadata's columns ('s', 'rain')
 
 
@@ -222,7 +222,7 @@ augur export v2 -t results/new_tree.nwk --node-data results/branches.json --outp
 ``` 
 
 # view the tree 
-To view the tree we will have to write a ```narrative.md``` file that works alongside the dataset directory. This can be found in  ```narratives``` 
+To view the tree we will have to write a ```narrative.md``` file that works alongside the dataset directory. This can be found in; ```narratives``` 
 
 ```
 ---
