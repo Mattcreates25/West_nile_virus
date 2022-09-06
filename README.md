@@ -290,7 +290,7 @@ __output__
 
 ```
 
-Using R on the commandline we created a script called ```rscript.R ``` and marked it as an executable file using ```chmod +x rscript.R```
+instead of using the kakscalculator tool with bash. we opted to Using R on the commandline we created a script called ```rscript.R ``` and marked it as an executable file using ```chmod +x rscript.R```
 to run the script simply call ```Rscript rscript.R```
 
 __output error__
@@ -299,3 +299,10 @@ warning message:
 In kaks(all_alignment, verbose = F, debug = F, forceUpperCase = T,  :
   sequence lengths are not a multiple of 3
 ```
+
+Due to this error we opted to use ```mega``` to calculated the non-synonymous to synonymous ratios along the viral genomes
+
+![geneticdistances](https://user-images.githubusercontent.com/97890823/188677151-74da97a3-28a2-4ed4-88b5-ebb1053a92ae.jpg)
+
+
+The phylogenetic analysis confirms the initial assignment to lineage 1. The table provides the estimated genetic distances among the WNV genome sequences, The values are average distances between all the sequences in the cluster and the compared sequence. the sequences __GU011992__, __JF719068__, __KF234080__, __FJ483549__, __FJ483548__, __JF719065__, __JF719067__, and __JF719066__, from the 2008–2009 Italian outbreak. additionally, the sequences __KC954092__, __KF647253__, __JX556213__, and __JQ928174__ from the 2012 and 2013 Italian outbreaks. the 3 Sequences __JN858069__ and __JQ928175__ are from the 2011 Italian outbreak.
