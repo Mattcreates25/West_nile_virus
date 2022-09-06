@@ -6,10 +6,10 @@ West Nile virus (WNV), a member of the Flavivirus genus, is transmitted in an en
 A phylogenetic analysis was performed on the obtained consensus genomes in the context of a world-wide representative set of WNVs. 
 
 ## Objectives
-1. To download the sequences
-2. Tp perform phylogenetic analysis
-3. To document the work in GitHub
-4. To prepare a presentation for the same
+1. download the sequences
+2. perform phylogenetic analysis
+3. document the work in GitHub
+4. prepare a presentation for the same
 
 ## workspace preparations 
 The first thing we did was create a working directory where we will save our files. we initiated a git repo this way we could share our work on GitHub
