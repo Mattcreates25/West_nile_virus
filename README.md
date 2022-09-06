@@ -176,10 +176,10 @@ new_meta.to_csv('newmeta.csv',index=False)
 
 ```
 
-__marking the parse script as an executable file__
+marking the parse script as an executable file and run it using ```python parse.py``` in bash
 ```bash
 touch parse.py
-chmod +x sample-script.py
+chmod +x parse.py
 ```
 
 perform nucleotide base count  using ```augur index```
@@ -272,9 +272,30 @@ auspice view --datasetDir results/ --narrativeDir narrative/
 Sequences of the Spanish 2020 WNV outbreak ```OU``` the closest relatives from previous outbreaks in Italy and the sequence JF719069 from a lethal equine case in Andalusia (Spain) in 2010. Other Spanish outbreaks were: JF707789, from a mosquito in Huelva, FJ766331 and FJ766332 from a golden eagle in Toledo. Other related outbreaks from the Mediterranean region (Cyprus MF797870), or adjacent locations (United Arab Emirates KU588135 and Russia MN149538) are also included.
 
 ## future
-calculate non-synonymous to synonymous ratios along the viral genomes using the ```KaKs_Calculator```
+calculate non-synonymous to synonymous ratios along the viral genomes using the ```KaKs_Calculator``` 
+and find the The variability along the viral genomes using the Shannon entropy(basically we were measuring the uncertainty of the nucleotide distribution)
 
-install a kaks calulator with conda using bioconda as a channel
+create a python script  for the shannon entropy remember to install ```scipy```
 ```bash
-conda install -c bioconda kakscalculator2
+pip install scipy
+touch shannon.py
+chmod +x shannon.py
+```
+
+run the python script shannon.py using ```python shannon.py```
+
+__output__
+```
+3.661932872373583
+
+```
+
+Using R on the commandline we created a script called ```rscript.R ``` and marked it as an executable file using ```chmod +x rscript.R```
+to run the script simply call ```Rscript rscript.R```
+
+__output error__
+```r
+warning message:
+In kaks(all_alignment, verbose = F, debug = F, forceUpperCase = T,  :
+  sequence lengths are not a multiple of 3
 ```
