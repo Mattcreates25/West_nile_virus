@@ -2,7 +2,7 @@ import collections
 
 from scipy.stats import entropy
 
-def estimate_shannon_entropy(dna_sequence):
+def shannon(dna_sequence):
     bases = collections.Counter([tmp_base for tmp_base in dna_sequence])
     # define distribution
     dist = [x/sum(bases.values()) for x in bases.values()]
@@ -13,5 +13,6 @@ def estimate_shannon_entropy(dna_sequence):
     return entropy_value
 
 
-print(estimate_shannon_entropy('results/all_alignment.fasta'))
+print(shannon('results/all_alignment.fasta'))
+
 
