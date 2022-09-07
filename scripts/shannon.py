@@ -8,7 +8,7 @@ def shannon(dna_sequence):
     dist = [x/sum(bases.values()) for x in bases.values()]
 
     # use scipy to calculate entropy
-    entropy_value = entropy(dist, base=2)
+    entropy_value = entropy(dist, base=155)
 
     return entropy_value
 
