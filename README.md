@@ -285,9 +285,8 @@ chmod +x shannon.py
 run the python script shannon.py using ```python shannon.py```
 
 __output__
-```
-3.661932872373583
-
+```bash
+0.5032
 ```
 
 instead of using the kakscalculator tool with bash. we opted to Using R on the commandline we created a script called ```rscript.R ``` and marked it as an executable file using ```chmod +x rscript.R```
